@@ -22,7 +22,11 @@ function search(e){
          }
     })
    .then((res)=>res.json())
-   .then((data)=>console.log(data))
+   .then((data)=>{
+    Array.from(data.results).forEach((image)=>{
+        console.log(image.urls.small)
+    })
+   })
    .catch((err)=>console.log(err));
 
     e.preventDefault();

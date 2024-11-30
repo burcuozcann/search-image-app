@@ -24,11 +24,28 @@ function search(e){
    .then((res)=>res.json())
    .then((data)=>{
     Array.from(data.results).forEach((image)=>{
-        console.log(image.urls.small)
+        //console.log(image.urls.small)
+        addImageToUI(image.urls.small);
+
     })
    })
    .catch((err)=>console.log(err));
 
     e.preventDefault();
+
+}
+
+function addImageToUI(url){
+    const div=document.createElement("div");
+    div.className="card";
+
+    const img=document.createElement("img");
+    img.setAttribute("src",url);
+    img.height='400';
+    img.width='400';
+
+    div.append(img);
+    imageListWrapper.appendChild(div);
+
 
 }

@@ -35,3 +35,18 @@
     color: #fff;
     box-shadow: 1px 3px 5px lightgrey;
 }
+.imagelist-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.imagelist-wrapper>.card{
+    margin: 20px;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 8px grey;
+
+}
